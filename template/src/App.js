@@ -3,11 +3,15 @@ import './App.css';
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 import Home from "./pages/Home"
-import Page1 from "./pages/Page1"
-import Page2 from "./pages/Page2"
-import Page3 from "./pages/Page3"
+import Projects from "./pages/Projects"
+import Page3 from "./pages/Settings"
 import NavBar from './pages/components/Navbar';
 import Footer from './pages/components/Footer';
+import Inventory from './pages/Inventory';
+import Settings from './pages/Settings';
+import CheckIn from './pages/CheckIn';
+import CheckOut from './pages/CheckOut';
+import CreateProject from './pages/CreateProject';
 
 {/*
   Create new Button function
@@ -30,14 +34,23 @@ function App() {
             <Route exact path="/">
               <Home />
             </Route>
-            <Route path="/page1">
-              <Page1 />
+            <Route path="/inventory">
+              <Inventory />
             </Route>
-            <Route path="/page2">
-              <Page2 />
+            <Route path="/projects">
+              <Projects />
             </Route>
-            <Route path="/page3">
-              <Page3 />
+            <Route path="/settings">
+              <Settings />
+            </Route>
+            <Route path="/checkin">
+              <CheckIn />
+            </Route>
+            <Route path="/checkout">
+              <CheckOut />
+            </Route>
+            <Route path="/createproject">
+              <CreateProject />
             </Route>
           </Switch>
         </div>

@@ -1,5 +1,7 @@
+/* eslint-disable no-unused-vars */
 import React from 'react';
 import { Link } from 'react-router-dom';
+import {ReactComponent as Truck} from "./truck.svg"
 
 class NavBar extends React.Component {
     render(){
@@ -10,23 +12,27 @@ class NavBar extends React.Component {
             </button>
             <Link class="navbar-brand" to='/'>
                 {/*image*/}
-                <img src="./public/logo192.png" alt="" width="40" height="30" class="d-inline-block align-middle"/>
-                Title
+                <div style= {{height:40, width:30}} alt ="truck svg" class="d-inline-block align-middle">
+                    <Truck/>
+                </div>
+                Inventory <b>Beta</b>
             </Link>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <div class="d-flex align-items-end">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                        {/*Page 1*/}
                         <li class="nav-item">
-                            <Link class="nav-link {% if about %}active{% endif %}" aria-current="page" to="/page1">Page 1</Link>
+                            <Link class="nav-link {% if about %}active{% endif %}" aria-current="page" to="/">Home</Link>
+                        </li>
+                        <li class="nav-item">
+                            <Link class="nav-link {% if about %}active{% endif %}" aria-current="page" to="/inventory">Inventory</Link>
                         </li>
                         {/*Page 2*/}
                         <li class="nav-item">
-                            <Link class="nav-link {% if portfolio %}active{% endif %}" to="/page2">Page 2</Link>
+                            <Link class="nav-link {% if portfolio %}active{% endif %}" to="/projects">Projects</Link>
                         </li>
                         {/*Page 3*/}
                         <li class="nav-item">
-                            <Link class="nav-link {% if impossible %}active{% endif %}" to="/page3">Page 3</Link>
+                            <Link class="nav-link {% if impossible %}active{% endif %}" to="/settings">Settings</Link>
                         </li>
                     </ul>
                 </div>
